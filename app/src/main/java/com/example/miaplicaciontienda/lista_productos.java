@@ -40,6 +40,7 @@ public class lista_productos extends Activity {
     int posicion = 0;
     obtenerDatosServidor datosServidor;
     detectarInternet di;
+    private Object respuesta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,7 +96,7 @@ public class lista_productos extends Activity {
                 String _rev = jsonArray.getJSONObject(posicion).getString("_rev");
                 String url = utilidades.url_mto + "/" + _id + "?rev=" + _rev;
                 enviarDatosServidor objEnviarDatosServidor = new enviarDatosServidor(this);
-                String respuesta = objEnviarDatosServidor.onPostExecute(datosAmigos.toString(), "DELETE", url).get();
+                String respuesta = objEnviarDatosServidor.execute(datosAmigos.toString(), "DELETE", url).get();
                 JSONObject respuestaJSON = new JSONObject(respuesta);
                 if (respuestaJSON.getBoolean("ok")) {
                     obtenerDatosAmigos();
