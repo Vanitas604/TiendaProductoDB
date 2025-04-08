@@ -26,7 +26,6 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="0dp"
         android:layout_marginRight="20dp"
-        android:hint="PROV0001"
         android:textColor="@color/textoBase"
         android:textColorHint="@color/textoBase" />
 
@@ -48,7 +47,6 @@
         android:layout_below="@+id/lblDescripcion"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:hint="Gaseosa"
         android:textColor="@color/textoBase"
         android:textColorHint="@color/textoBase" />
 
@@ -70,7 +68,6 @@
         android:layout_below="@+id/lblPrecio"
         android:layout_marginStart="20dp"
         android:layout_marginRight="20dp"
-        android:hint="2.00"
         android:textColor="@color/textoBase"
         android:textColorHint="@color/textoBase" />
 
@@ -93,7 +90,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginRight="20dp"
         android:layout_toEndOf="@+id/txtDescripcion"
-        android:hint="Coca Cola"
         android:textColor="@color/textoBase"
         android:textColorHint="@color/textoBase" />
 
@@ -105,7 +101,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginRight="20dp"
         android:layout_toEndOf="@+id/txtCodigo"
-        android:hint="Botella"
         android:textColor="@color/textoBase"
         android:textColorHint="@color/textoBase" />
 
