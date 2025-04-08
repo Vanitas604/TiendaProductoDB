@@ -9,6 +9,7 @@
     android:background="@color/fondo"
     tools:context=".MainActivity">
 
+
     <TextView
         android:id="@+id/lblCod"
         android:layout_marginStart="20dp"
