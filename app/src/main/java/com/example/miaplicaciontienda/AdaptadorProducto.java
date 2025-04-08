@@ -1,7 +1,5 @@
 package com.example.miaplicaciontienda;
 
-import static android.widget.Toast.makeText;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -12,29 +10,27 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 
 public class AdaptadorProducto extends BaseAdapter {
-
     Context context;
-    ArrayList<productos> alProductos;
+    ArrayList<productos> alAmigos;
     productos misProductos;
     LayoutInflater inflater;
 
-    public AdaptadorProducto(Context context, ArrayList<productos> alProductos) {
+    public AdaptadorProducto(Context context, ArrayList<productos> alAmigos) {
         this.context = context;
-        this.alProductos = alProductos;
+        this.alAmigos = alAmigos;
     }
 
     @Override
     public int getCount() {
-        return alProductos.size();
+        return alAmigos.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return alProductos.get(position);
+        return alAmigos.get(position);
     }
 
     @Override
@@ -47,27 +43,26 @@ public class AdaptadorProducto extends BaseAdapter {
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View itemView = inflater.inflate(R.layout.fotos, parent, false);
         try {
-            misProductos = alProductos.get(position);
+            misProductos = alAmigos.get(position);
 
             TextView tempVal = itemView.findViewById(R.id.lblCodigoAdaptador);
-            tempVal.setText(misProductos.getCodigo());
+            tempVal.setText(misProductos.getcodigo());
 
             tempVal = itemView.findViewById(R.id.lblDescripcionAdaptador);
-            tempVal.setText(misProductos.getDescripcion());
+            tempVal.setText(misProductos.getdescripcion());
 
             tempVal = itemView.findViewById(R.id.lblMarcaAdaptador);
-            tempVal.setText(misProductos.getMarca());
-
-            tempVal = itemView.findViewById(R.id.lblPresentacionAdaptador);
-            tempVal.setText(misProductos.getPresentacion());
+            tempVal.setText(misProductos.getmarca());
 
             tempVal = itemView.findViewById(R.id.lblPrecioAdaptador);
-            tempVal.setText(misProductos.getPrecio());
+            tempVal.setText(misProductos.getprecio());
+
+            tempVal = itemView.findViewById(R.id.lblPresentacionAdaptador);
+            tempVal.setText(misProductos.getpresentacion());
 
             ImageView img = itemView.findViewById(R.id.imgFotoAdaptador);
             Bitmap bitmap = BitmapFactory.decodeFile(misProductos.getFoto());
             img.setImageBitmap(bitmap);
-
         } catch (Exception e) {
             Toast.makeText(context, "Error: " + e.getMessage(), Toast.LENGTH_LONG).show();
         }
