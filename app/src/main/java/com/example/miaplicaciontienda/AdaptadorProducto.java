@@ -28,6 +28,7 @@ public class AdaptadorProducto extends BaseAdapter {
         return alAmigos.size();
     }
 
+
     @Override
     public Object getItem(int position) {
         return alAmigos.get(position);

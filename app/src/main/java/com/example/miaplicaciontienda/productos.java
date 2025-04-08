@@ -23,6 +23,7 @@ public class productos {
         this.foto2 = foto2;
     }
 
+
     public String getidProducto() {
         return idProducto;
     }

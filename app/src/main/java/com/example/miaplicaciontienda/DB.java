@@ -31,6 +31,7 @@ public class DB extends SQLiteOpenHelper {
         }
 
     }
+
     public String administrar_productos(String accion, String[] datos) {
         try{
             SQLiteDatabase db = getWritableDatabase();

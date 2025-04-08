@@ -29,6 +29,7 @@ public class enviarDatosServidor extends AsyncTask<String, String, String> {
         String _url = parametros[2];
         StringBuilder respuesta = new StringBuilder();
 
+
         try {
             URL url = new URL(_url);
             httpURLConnection = (HttpURLConnection) url.openConnection();
